@@ -1,0 +1,79 @@
+@import "bourbon"
+
+$avenir: "Avenir Next", 'Helvetica Neue', Helvetica, arial, sans-serif
+$myriad: "Myriad Pro", arial, sans-serif
+
+.container
+  position: relative
+  background: #fff
+  font-family: $avenir
+
+.hoffman
+  background: image-url('hoffman.jpg')
+  background-size: contain
+  background-repeat: no-repeat
+  background-position: top center
+  position: absolute
+  left: 0
+  top: 0
+  right: 0
+  min-height: 800px
+  z-index: 1
+  opacity: 0.21
+
+
+.intro
+  background: image-url('intro.png')
+  width: 711px
+  height: 305px
+  margin: auto
+  background-size: 100%
+  margin-top: 35px
+
+.intro-body
+  background: #fff
+  max-width: 623px
+  margin: auto
+  margin-top: 65px
+  padding: 30px 45px
+  font-size: 18px
+  line-height: 1.5
+  p
+    margin-bottom: 25px
+.above-hoffman
+  position: relative
+  z-index: 2
+  padding-bottom: 80px
+
+
+.page-body
+  text-align: center
+  h2, h3
+    font-family: $myriad
+    font-weight: bold
+    font-size: 72px
+  .step-wrapper
+    margin-bottom: 40px
+  h2
+    margin-top: 0
+    margin-bottom: 40px
+    color: #000
+  h3
+    font-size: 45px
+    margin-bottom: 0px
+  a.big
+    font-size: 45px
+    font-family: $myriad
+    color: #0D6CA5
+    text-decoration: underline
+  .step
+    background: #1381B2
+    display: inline-block
+    font-family: $myriad
+    font-weight: bold
+    font-size: 72px
+    line-height: 72px
+    color: #fff
+    padding: 20px 30px
+    padding-bottom: 10px
+    border-radius: 5px
