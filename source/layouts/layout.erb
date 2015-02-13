@@ -1,15 +1,33 @@
 <!doctype html>
-<html>
+<html xmlns:fb="http://ogp.me/ns/fb#">
   <head>
     <meta charset="utf-8">
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <title>Stop Using LinkedIn</title>
+
+    <meta property="og:image" content="http://www.stopusinglinkedin.com/images/intro-share.png"/>
+    <meta property="og:title" content="Stop Using LinkedIn"/>
+    <meta property="og:url" content="http://www.stopusinglinkedin.com"/>
+    <meta property="og:site_name" content="Stop Using LinkedIn"/>
+    <meta property="og:type" content="article"/>
+
+
     <%= stylesheet_link_tag "//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" %>
     <%= stylesheet_link_tag "all" %>
     <%= javascript_include_tag "https://code.jquery.com/jquery-1.11.2.min.js","//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js" %>
   </head>
 
   <body>
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
+
     <%= yield %>
   </body>
 </html>
