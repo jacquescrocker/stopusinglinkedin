@@ -2,6 +2,7 @@
 .container
   .above-hoffman
     .intro
+
     .intro-body
       p On February 12, 2015 -- a date which will live in infamy, the data by which you live your daily professional lives was suddenly and deliberately <a target="_blank" href="#{image_path('significant_changes.png')}">restricted</a> by the empire of LinkedIn.
 
@@ -9,6 +10,9 @@
 
       p We (undersigned and federated bodies of the internet) ask that the users and developers declare that since the unprovoked and dastardly attack by Linkedin on February 12, 2015, a state of boycott has existed between the federated developer community and the empire of LinkedIn.
 
+      .social-media
+        | <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.stopusinglinkedin.com" data-text="Stop Using Linkedin" data-count="none">Tweet</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        | <fb:share-button href="http://www.stopusinglinkedin.com" layout="button" class="fb-share"></fb:share-button>
 
     .page-body
       h2 But what can I do?
@@ -26,9 +30,11 @@
       .step-wrapper
         div: .step 3
         h3 Use these alternatives
+        .signup-btn.btn.btn-default.btn-lg data-toggle="modal" data-target="#signupModal"
+          | Stay Updated
 
         / TODO: sign up for a mailing list to get alternatives
-
+        hr.logos-sep
         .logos
           h4 For Startup People
           a.logo href="https://angel.co/"
@@ -89,9 +95,59 @@
           | Suggest Alternative
         br
         br
-        a.big href="mailto:contact@stopusinglinkedin.com?subject=Press Inquiries"
-          | Press Inquiries
+        a.big href="#" data-toggle="modal" data-target="#signupModal"
+          | Show Support
         br
         br
         a.big href="mailto:contact@stopusinglinkedin.com"
           | Email Us
+
+
+
+erb:
+
+  <!-- Modal -->
+  <div class="signup-modal modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="signupModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="signupModalLabel">Get LinkedOut</h4>
+        </div>
+        <div class="modal-body">
+          <div class="signup-form">
+            <p>A simple newsletter (max 2 emails a year) to keep you up to date with better LinkedIn alternatives.</p>
+            <!-- Begin MailChimp Signup Form -->
+            <div id="mc_embed_signup">
+            <form action="//stopusinglinkedin.us10.list-manage.com/subscribe/post?u=43de30c5c0c7f65c8a5a3af89&amp;id=e96d98e55e" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+              <div id="mc_embed_signup_scroll">
+                <div class="mc-field-group">
+                  <label for="mce-EMAIL">Email Address  <span class="asterisk">*</span>
+                </label>
+                  <input type="email" value="" name="EMAIL" class="required email form-control" id="mce-EMAIL">
+                </div>
+                <div class="mc-field-group">
+                  <label for="mce-FNAME">First Name </label>
+                  <input type="text" value="" name="FNAME" class="form-control" id="mce-FNAME">
+                </div>
+                <div class="mc-field-group">
+                  <label for="mce-LNAME">Last Name </label>
+                  <input type="text" value="" name="LNAME" class="form-control" id="mce-LNAME">
+                </div>
+                <div id="mce-responses" class="clear">
+                  <div class="response" id="mce-error-response" style="display:none"></div>
+                  <div class="response" id="mce-success-response" style="display:none"></div>
+                </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                  <div style="position: absolute; left: -5000px;"><input type="text" name="b_43de30c5c0c7f65c8a5a3af89_e96d98e55e" tabindex="-1" value=""></div>
+                  <div class="clear signup-actions"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button btn btn-default btn-lg"></div>
+                  </div>
+              </form>
+            </div>
+            <!--End mc_embed_signup-->
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
